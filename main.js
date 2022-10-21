@@ -38,7 +38,6 @@ async function fetch_tracks() {
   await fetch("./tracks.json")
   .then(res => res.json())
   .then(data => {
-    console.log(data)
     track_list = data
   })
 }
