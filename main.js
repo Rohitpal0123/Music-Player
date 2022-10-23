@@ -41,8 +41,8 @@ let track_list = [
     image:
       "https://images.pexels.com/photos/1717969/pexels-photo-1717969.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
     path: "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Chad_Crouch/Arps/Chad_Crouch_-_Shipping_Lanes.mp3",
-
-};
+  }
+];
 
 function random_bg_color() {
   // Get a number between 64 to 256 (for getting lighter colors)
@@ -58,16 +58,17 @@ function random_bg_color() {
 }
 
 //Autotext
-let i = 1;
-setInterval(AutoText, 150);
-function AutoText() {
-  track_name.textContent = track_list[track_index].name.substring(0, i);
+let i=1;
+setInterval(AutoText,150)
+function AutoText(){
+ 
+  track_name.textContent= track_list[track_index].name.substring(0,i);
+    
+i++
 
-  i++;
-
-  if (i > track_list[track_index].name.length) {
-    i = 1;
-  }
+if(i>track_list[track_index].name.length){
+    i=1;
+}
 }
 function loadTrack(track_index) {
   clearInterval(updateTimer);
