@@ -8,10 +8,27 @@
 
     <!-- Load the custom CSS style file -->
     <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <!-- call animation css -->
+    <link rel="stylesheet" href="animations.css"/>
+    <style>
+        #particles-js{
+            width: 100wh;
+            height: 100vh;
+            position: absolute;
+            z-index:-1;
+        }
+        .player{
+            z-index: 1;
+        }
+    </style>
 </head>
 
 <body>
+    <div id="particles-js"></div>
+
     <div class="player">
+
 
         <!-- Define the section for displaying details -->
         <div class="details">
@@ -37,20 +54,26 @@
         <!-- Define the section for displaying the seek slider-->
         <div class="slider_container">
             <div class="current-time">00:00</div>
-            <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+            <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()"/>
             <div class="total-duration">00:00</div>
         </div>
 
         <!-- Define the section for displaying the volume slider-->
         <div class="slider_container">
             <i class="fa fa-volume-down"></i>
-            <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+            <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()"/>
             <i class="fa fa-volume-up"></i>
         </div>
     </div>
 
     <!-- Load the main script for the player -->
     <script src="main.js"></script>
+    <!-- useful files for the functioning of partical js(animations) library  -->
+    <script src="particles.js"></script>
+  <script src="app.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src='css3-animate-it.js'></script>
 </body>
 
 </html>
