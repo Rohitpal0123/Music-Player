@@ -13,6 +13,7 @@ body {
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  /* background: yellow; */
 }
 
 .details {
@@ -21,6 +22,7 @@ body {
   flex-direction: column;
   justify-content: center;
   margin-top: 25px;
+  /* background: red; */
 }
 
 .track-art {
@@ -30,7 +32,11 @@ body {
   background-image: URL("https://source.unsplash.com/Qrspubmx6kE/640x360");
   background-size: cover;
   background-position: center;
-  border-radius: 15%;
+  /* border-radius: 15%; */
+  border-radius: 50px;
+/* background: linear-gradient(145deg, #f0f0f0, #cacaca); */
+  box-shadow: 5px 5px 14px #5a5a5a,
+             -5px -5px 14px #ffffff;
 }
 
 /* Changing the font sizes to suitable ones */
@@ -52,6 +58,10 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  border-radius: 150px;
+background: #e0e0e0;
+box-shadow: inset 5px 5px 10px #6c6c6c,
+            inset -5px -5px 10px #ffffff;
 }
 
 .playpause-track,
