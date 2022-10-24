@@ -15,34 +15,32 @@ let total_duration = document.querySelector(".total-duration");
 let track_index = 0;
 let isPlaying = false;
 let updateTimer;
+let track_list = [];
+let i=1;
 
 // Create new audio element
 let curr_track = document.createElement("audio");
 
-// Define the tracks that have to be played
-let track_list = [
-  {
-    name: "Night Owl",
-    artist: "Broke For Free",
-    image:
-      "https://images.pexels.com/photos/2264753/pexels-photo-2264753.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
-    path: "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/WFMU/Broke_For_Free/Directionless_EP/Broke_For_Free_-_01_-_Night_Owl.mp3",
-  },
-  {
-    name: "Enthusiast",
-    artist: "Tours",
-    image:
-      "https://images.pexels.com/photos/3100835/pexels-photo-3100835.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
-    path: "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Tours/Enthusiast/Tours_-_01_-_Enthusiast.mp3",
-  },
-  {
-    name: "Shipping Lanes",
-    artist: "Chad Crouch",
-    image:
-      "https://images.pexels.com/photos/1717969/pexels-photo-1717969.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
-    path: "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Chad_Crouch/Arps/Chad_Crouch_-_Shipping_Lanes.mp3",
-  }
-];
+async function set_up_tracks() {
+
+  // Fetches the tracks that have to be played
+  fetch_tracks()
+
+  //Autotext
+  setInterval(AutoText,150)
+
+  // Load the first track in the tracklist
+  loadTrack(track_index);
+}
+
+async function fetch_tracks() {
+
+  await fetch("./tracks.json")
+  .then(res => res.json())
+  .then(data => {
+    track_list = data
+  })
+}
 
 function random_bg_color() {
   // Get a number between 64 to 256 (for getting lighter colors)
@@ -57,18 +55,15 @@ function random_bg_color() {
   document.body.style.background = bgColor;
 }
 
-//Autotext
-let i=1;
-setInterval(AutoText,150)
 function AutoText(){
  
   track_name.textContent= track_list[track_index].name.substring(0,i);
     
-i++
+  i++
 
-if(i>track_list[track_index].name.length){
-    i=1;
-}
+  if(i>track_list[track_index].name.length){
+      i=1;
+  }
 }
 function loadTrack(track_index) {
   clearInterval(updateTimer);
@@ -93,9 +88,6 @@ function resetValues() {
   total_duration.textContent = "00:00";
   seek_slider.value = 0;
 }
-
-// Load the first track in the tracklist
-loadTrack(track_index);
 
 function playpauseTrack() {
   if (!isPlaying) playTrack();
@@ -172,4 +164,4 @@ function seekUpdate() {
   }
 }
 
-
+set_up_tracks()
