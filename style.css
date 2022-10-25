@@ -41,7 +41,7 @@ body {
 
 /* Changing the font sizes to suitable ones */
 .now-playing {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .track-name {
@@ -58,20 +58,31 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  border-radius: 150px;
-background: #e0e0e0;
-box-shadow: inset 5px 5px 10px #6c6c6c,
-            inset -5px -5px 10px #ffffff;
 }
 
-.playpause-track,
+/* .playpause-track,
 .prev-track,
 .next-track {
   padding: 25px;
-  opacity: 0.8;
+  opacity: 0.8; */
 
   /* Smoothly transition the opacity */
-  transition: opacity 0.2s;
+  /* transition: opacity 0.2s; */
+/* } */
+
+.playpause-track,
+.prev-track,
+.next-track{
+  display:grid;
+  place-items:center;
+  cursor:pointer;
+  padding:25px;
+  background:transparent;
+  border-radius:50%;
+  transition:all 0.3s ease-in;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.1),
+    -10px -10px 10px rgba(255,255,255,0.5);
+  margin-top: 15px;
 }
 
 /* Change the opacity when mouse is hovered */
@@ -79,6 +90,21 @@ box-shadow: inset 5px 5px 10px #6c6c6c,
 .prev-track:hover,
 .next-track:hover {
   opacity: 1;
+}
+
+.playpause-track .fas{
+  display:grid;
+  place-items:center;
+  font-size:2rem;
+  color:gray;
+}
+
+.playpause-track:active, .prev-track:active, .next-track:active{
+  box-shadow: inset 10px 10px 10px rgba(0,0,0,0.5),
+    inset -10px -10px 10px rgba(255,255,255,0.4);
+}
+.playpause-track:active .fas{
+  color:#721efa;
 }
 
 /* Define the slider width so that it scales properly */

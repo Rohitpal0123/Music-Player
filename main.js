@@ -59,7 +59,7 @@ function random_bg_color() {
 
 //Autotext
 let i=1;
-setInterval(AutoText,150)
+setInterval(AutoText,400)
 function AutoText(){
  
   track_name.textContent= track_list[track_index].name.substring(0,i);
@@ -105,13 +105,13 @@ function playpauseTrack() {
 function playTrack() {
   curr_track.play();
   isPlaying = true;
-  playpause_btn.innerHTML = '<i class="fa fa-pause-circle fa-5x"></i>';
+  playpause_btn.innerHTML = '<i class="fa fa-pause-circle fa-3x"></i>';
 }
 
 function pauseTrack() {
   curr_track.pause();
   isPlaying = false;
-  playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-5x"></i>';
+  playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-3x"></i>';
 }
 
 function nextTrack() {
