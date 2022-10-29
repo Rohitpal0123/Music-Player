@@ -41,6 +41,34 @@ let track_list = [
     image:
       "https://images.pexels.com/photos/1717969/pexels-photo-1717969.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
     path: "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Chad_Crouch/Arps/Chad_Crouch_-_Shipping_Lanes.mp3",
+  },
+  {
+    name: "SoundHelix Song 14",
+    artist: "T. Schürger",
+    image:
+      "https://images.pexels.com/photos/3100835/pexels-photo-3100835.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
+    path: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+  },
+  {
+    name: "SoundHelix Song 12",
+    artist: "T. Schürger",
+    image:
+      "https://images.pexels.com/photos/2264753/pexels-photo-2264753.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
+    path: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3",
+  },
+  {
+    name: "SoundHelix Song 8",
+    artist: "T. Schürger",
+    image:
+      "https://images.pexels.com/photos/1717969/pexels-photo-1717969.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
+    path: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-14.mp3",
+  },
+  {
+    name: "SSoundHelix Song 1",
+    artist: "T. Schürger",
+    image:
+      "https://images.pexels.com/photos/3100835/pexels-photo-3100835.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
+    path: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-13.mp3",
   }
 ];
 
