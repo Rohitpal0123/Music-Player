@@ -96,8 +96,8 @@ box-shadow: inset 8px 7px 10px #6c6c6c,
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 5px;
-  background: black;
+  height: 7px;
+  background: grey;
   opacity: 0.7;
   -webkit-transition: 0.2s;
   transition: opacity 0.2s;
