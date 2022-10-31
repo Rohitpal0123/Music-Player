@@ -60,8 +60,8 @@ body {
   align-items: center;
   border-radius: 150px;
 background: #e0e0e0;
-box-shadow: inset 8px 7px 10px #6c6c6c,
-            inset -8px -7px 10px #ffffff;
+box-shadow: inset 5px 5px 10px #6c6c6c,
+            inset -5px -5px 10px #ffffff;
 }
 
 .playpause-track,
